@@ -43,10 +43,10 @@ module Preferences
       when :any
         value
       when :boolean
-        if value.class == 'String'
+        if value.class == String
           value == "1"
         else
-          default_value
+          value
         end
       else
         @column.type_cast(value)
