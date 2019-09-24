@@ -43,7 +43,7 @@ module Preferences
       when :any
         value
       when :boolean
-        if value.class == String
+        if value.is_a?(String)
           value == "1"
         else
           value
